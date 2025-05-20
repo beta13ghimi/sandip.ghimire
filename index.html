@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <!-- ✅ Updated for better zoom behavior -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Sandip Ghimire - PUBG Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
@@ -15,15 +14,11 @@
     }
 
     html, body {
-      overflow-x: hidden; /* ✅ Prevent horizontal zoom drift */
-      max-width: 100vw;    /* ✅ Prevent overscroll on zoom */
+      overflow-x: hidden;
+      max-width: 100vw;
       background-color: #121212;
       color: #fff;
       line-height: 1.6;
-    }
-
-    body {
-      touch-action: manipulation; /* ✅ Improve mobile touch behavior */
     }
 
     header {
@@ -68,9 +63,9 @@
     }
 
     .bio {
-      max-width: 800px;
-      margin: 40px auto;
-      padding: 20px;
+      max-width: 700px;
+      margin: 10px auto;
+      padding-bottom: 100px;
       text-align: center;
       background-color: #1c1c1c;
       border-radius: 10px;
@@ -79,18 +74,19 @@
 
     .bio h2 {
       color: #ffd700;
-      margin-bottom: 10px;
+      margin: 0px;
+      padding-top: 0px;
     }
 
     .stats {
       background-color: #1c1c1c;
-      padding: 40px 20px;
+      padding: 0px 50px;
       text-align: center;
     }
 
     .stats h2 {
       color: #ffd700;
-      margin-bottom: 30px;
+      margin-bottom: 0px;
       font-size: 2em;
     }
 
@@ -153,6 +149,65 @@
       box-shadow: 0 0 25px rgba(255, 215, 0, 0.2);
     }
 
+    .contact {
+      background-color: #1c1c1c;
+      padding: 40px 20px;
+      text-align: center;
+      border-top: 1px solid #333;
+    }
+
+    .contact h2 {
+      color: #ffd700;
+      margin-bottom: 20px;
+      font-size: 2em;
+    }
+
+    .contact p, .contact a {
+      color: #ccc;
+      font-size: 1.1em;
+      margin: 10px 0;
+      text-decoration: none;
+    }
+
+    .contact a:hover {
+      text-decoration: underline;
+      color: #ffd700;
+    }
+
+    .resume-btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #ffd700;
+      color: #121212;
+      font-weight: bold;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .resume-btn:hover {
+      background-color: #fff;
+      color: #000;
+    }
+
+    .social-links {
+      text-align: center;
+      margin: 30px 0;
+    }
+
+    .social-links a {
+      margin: 0 10px;
+      color: #ffd700;
+      text-decoration: none;
+      font-size: 1.1em;
+    }
+
+    .social-links a:hover {
+      text-decoration: underline;
+      color: #fff;
+    }
+
     footer {
       text-align: center;
       padding: 20px;
@@ -160,6 +215,24 @@
       margin-top: 40px;
       font-size: 0.9em;
       color: #888;
+    }
+
+    .card-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 50px 0; /* Optional: add spacing */
+    }
+
+    .card {
+      background-color: #2e2e2e;
+      color: #ffffff;
+      border-radius: 12px;
+      padding: 40px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+      text-align: center;
+      max-width: 350px;
+      width: 90%;
     }
 
     @media (max-width: 600px) {
@@ -186,52 +259,60 @@
       }
     }
 
-    .contact {
-      background-color: #1c1c1c;
-      padding: 40px 20px;
-      text-align: center;
-      border-top: 1px solid #333;
-    }
 
-    .contact h2 {
-      color: #ffd700;
-      margin-bottom: 20px;
-      font-size: 2em;
-    }
 
-    .contact p, .contact a {
-      color: #ccc;
-      font-size: 1.1em;
-      margin: 10px 0;
-      text-decoration: none;
-    }
+    .rank-history {
+  background-color: #1c1c1c;
+  padding: 100px 50px;
+  text-align: center;
+}
 
-    .contact a:hover {
-      text-decoration: underline;
-      color: #ffd700;
-    }
+.rank-history h2 {
+  color: #ffd700;
+  font-size: 2em;
+  margin-bottom: 30px;
+}
 
-    .social-links {
-      text-align: center;
-      margin: 30px 0;
-    }
+.rank-timeline {
+  max-width: 800px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
 
-    .social-links a {
-      margin: 0 10px;
-      color: #ffd700;
-      text-decoration: none;
-      font-size: 1.1em;
-    }
+.rank-item {
+  background-color: #2b2b2b;
+  padding: 15px 25px;
+  border-left: 5px solid #ffd700;
+  border-radius: 8px;
+  text-align: left;
+  color: #fff;
+  box-shadow: 0 0 12px rgba(255, 215, 0, 0.1);
+}
 
-    .social-links a:hover {
-      text-decoration: underline;
-      color: #fff;
-    }
+.rank-item .season {
+  font-weight: bold;
+  font-size: 1.2em;
+  color: #ffd700;
+}
+
+.rank-item .rank {
+  display: block;
+  margin-top: 5px;
+  font-size: 1em;
+  color: #ccc;
+}
+
+
+
+
+
+
   </style>
 </head>
 <body>
 
-<!-- ✅ Optional: Wrap in container to center layout more robustly -->
 <div class="container">
 
   <header>
@@ -247,6 +328,19 @@
     <h2>About Me</h2>
     <p>I'm Sandip Ghimire, a passionate PUBG Mobile player from Nepal. With years of dedication, I've mastered tactical gameplay and high-pressure clutches. Whether solo, duo, or squad, I always strive to dominate the battlefield. This portfolio showcases my best moments, victories, and highlights.</p>
   </section>
+
+  <div class="card-wrapper">
+    <div class="card">
+      <h2>PUBG Profile</h2>
+      <p><strong>IGN:</strong> Sandip_Thanos</p>
+      <p><strong>ID:</strong> 5123456789</p><br>
+      <h3>Favorite Weapons</h3>
+- M416<br>  
+- AKM<br>  
+- AWM
+
+    </div>
+  </div>
 
   <section class="stats">
     <h2>My Stats</h2>
@@ -275,6 +369,46 @@
         <h3>Highest Kill Game</h3>
         <p>32</p>
       </div>
+      <div class="stat-box">
+  <h3>Damage</h3>
+  <p>159,340</p>
+
+  </div>
+</div>
+
+
+
+<section class="rank-history">
+  <h2>🏆 Rank History</h2>
+  <div class="rank-timeline">
+    <div class="rank-item">
+      <span class="season">Season 18</span>
+      <span class="rank">Conqueror</span>
+    </div>
+    <div class="rank-item">
+      <span class="season">Season 19</span>
+      <span class="rank">Ace Master</span>
+    </div>
+    <div class="rank-item">
+      <span class="season">Season 20</span>
+      <span class="rank">Conqueror</span>
+    </div>
+    <div class="rank-item">
+      <span class="season">Season 21</span>
+      <span class="rank">Conqueror</span>
+    </div>
+    <div class="rank-item">
+      <span class="season">Season 22</span>
+      <span class="rank">Ace Dominator</span>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
     </div>
   </section>
 
@@ -300,14 +434,14 @@
   <div class="social-links fade-in">
     <a href="https://www.facebook.com/sandip.ghimire.1690" target="_blank">Facebook</a>
     <a href="https://www.instagram.com/sandip_ghimire_08" target="_blank">Instagram</a>
-    <a href="https://www.youtube.com/@yourusernamexyzxyz" target="_blank">Youtube</a>
+    <a href="https://www.youtube.com/@yourusernamexyzxyz" target="_blank">YouTube</a>
   </div>
 
   <footer>
     &copy; 2025 Sandip Ghimire | My PUBG Portfolio
   </footer>
 
-</div> <!-- end .container -->
+</div>
 
 </body>
 </html>
